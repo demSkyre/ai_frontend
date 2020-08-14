@@ -12,7 +12,7 @@ const PacienteContextProvider = (props) => {
 
   useEffect(() => {
     pacienteService.readAll().then((data) => setPacientes(data));
-  }, []);
+  }, [pacienteService, pacientes]);
 
   const createPaciente = (paciente) => {
     pacienteService
