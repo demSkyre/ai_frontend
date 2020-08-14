@@ -3,16 +3,16 @@ import { Panel } from "primereact/panel";
 import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
 import { Button } from "primereact/button";
-import { ProductContext } from "../contexts/ProductContext";
-import ProductForm from "./ProductForm";
+import { PacienteContext } from "../contexts/PacienteContext";
+import PacienteForm from "./PacienteForm";
 
-const ProductList = () => {
-  const { products, findProduct } = useContext(ProductContext);
+const PacienteList = () => {
+  const { pacientes, findPaciente } = useContext(PacienteContext);
 
   const [isVisible, setIsVisible] = useState(false);
 
-  const saveProduct = (id) => {
-    findProduct(id);
+  const savePaciente = (id) => {
+    findPaciente(id);
     setIsVisible(true);
   };
 
@@ -29,22 +29,23 @@ const ProductList = () => {
 
   return (
     <div>
-      <Panel header="LISTA DE PRODUCTOS" style={{ textAlign: "center" }}>
+      <Panel header="LISTA DE PACIENTES" style={{ textAlign: "center" }}>
         <DataTable
-          value={products}
+          value={pacientes}
           selectionMode="single"
-          onSelectionChange={(e) => saveProduct(e.value._id)}
+          onSelectionChange={(e) => savePaciente(e.value._id)}
           footer={footer}
         >
           <Column field="_id" header="Id" />
-          <Column field="name" header="Nombre" />
-          <Column field="price" header="Precio" />
-          <Column field="expiry_date" header="Fecha de Caducidad" />
+          <Column field="nombres" header="Nombres" />
+          <Column field="apellidos" header="Apellidos" />
+          <Column field="fecha_alta" header="Fecha de Alta" />
+          <Column field="fecha_baja" header="Fecha de Baja" />
         </DataTable>
       </Panel>
-      <ProductForm isVisible={isVisible} setIsVisible={setIsVisible} />
+      <PacienteForm isVisible={isVisible} setIsVisible={setIsVisible} />
     </div>
   );
 };
 
-export default ProductList;
+export default PacienteList;
