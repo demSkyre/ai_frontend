@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/ai_frontend/static/css/main.69eda509.chunk.css",
+    "main.js": "/ai_frontend/static/js/main.a6fab967.chunk.js",
+    "main.js.map": "/ai_frontend/static/js/main.a6fab967.chunk.js.map",
+    "runtime-main.js": "/ai_frontend/static/js/runtime-main.43171c38.js",
+    "runtime-main.js.map": "/ai_frontend/static/js/runtime-main.43171c38.js.map",
+    "static/css/2.c5b23881.chunk.css": "/ai_frontend/static/css/2.c5b23881.chunk.css",
+    "static/js/2.802d896f.chunk.js": "/ai_frontend/static/js/2.802d896f.chunk.js",
+    "static/js/2.802d896f.chunk.js.map": "/ai_frontend/static/js/2.802d896f.chunk.js.map",
+    "index.html": "/ai_frontend/index.html",
+    "precache-manifest.86ca6489de6c30797168ae0c3515146a.js": "/ai_frontend/precache-manifest.86ca6489de6c30797168ae0c3515146a.js",
+    "service-worker.js": "/ai_frontend/service-worker.js",
+    "static/css/2.c5b23881.chunk.css.map": "/ai_frontend/static/css/2.c5b23881.chunk.css.map",
+    "static/css/main.69eda509.chunk.css.map": "/ai_frontend/static/css/main.69eda509.chunk.css.map",
+    "static/js/2.802d896f.chunk.js.LICENSE.txt": "/ai_frontend/static/js/2.802d896f.chunk.js.LICENSE.txt",
+    "static/media/primereact.min.css": "/ai_frontend/static/media/line.567f5738.gif",
+    "static/media/theme.css": "/ai_frontend/static/media/open-sans-v15-latin-regular.cffb686d.woff2",
+    "static/media/primeicons.css": "/ai_frontend/static/media/primeicons.79432094.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.43171c38.js",
+    "static/css/2.c5b23881.chunk.css",
+    "static/js/2.802d896f.chunk.js",
+    "static/css/main.69eda509.chunk.css",
+    "static/js/main.a6fab967.chunk.js"
+  ]
+}
