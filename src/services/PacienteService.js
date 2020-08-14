@@ -2,8 +2,11 @@ import axios from "axios";
 
 export class PacienteService {
 
-    baseUrl = "http://localhost:8080/api/pacientes/";
-    // baseUrl = "https://hg-rest-api.herokuapp.com/api/products/";
+    // LOCAL
+    // baseUrl = "http://localhost:8080/api/pacientes/";
+
+    // REMOTE
+    baseUrl = "https://skyre-rest-api.herokuapp.com/api/pacientes/";
 
     create(paciente){
         return axios.post(this.baseUrl+"paciente/", paciente).then(res => res.data);
