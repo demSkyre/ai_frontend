@@ -86,7 +86,7 @@ const ProductoForm = (props) => {
               value={productoData.nombre}
               onChange={(e) => updateField(e.target.value.trim(), "nombre")}
             />
-            <label>Nombres:</label>
+            <label>Nombre:</label>
           </div>
           <br />
           <div className="p-float-label">
@@ -94,7 +94,7 @@ const ProductoForm = (props) => {
               value={productoData.precio}
               onChange={(e) => updateField(e.target.value, "precio")}
             />
-            <label>Apellidos:</label>
+            <label>Precio:</label>
           </div>
           <br />
           <div className="p-float-label">
