@@ -2,15 +2,15 @@ import React from 'react';
 import 'primereact/resources/themes/nova-light/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
-import PacienteContextProvider from './contexts/PacienteContext';
-import PacienteList from './components/PacienteList';
+import ProductoContextProvider from './contexts/PacienteContext';
+import ProductoList from './components/ProductoList';
 
 function App() {
   return (
     <div className="App">
-        <PacienteContextProvider>
-            <PacienteList/>
-        </PacienteContextProvider>
+        <ProductoContextProvider>
+            <ProductoList/>
+        </ProductoContextProvider>
     </div>
   );
 }
