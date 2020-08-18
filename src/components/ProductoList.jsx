@@ -3,11 +3,11 @@ import { Panel } from "primereact/panel";
 import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
 import { Button } from "primereact/button";
-import { PacienteContext } from "../contexts/PacienteContext";
-import PacienteForm from "./PacienteForm";
+import { ProductoContext } from "../contexts/ProductoContext";
+import ProductoForm from "./ProductoForm";
 
-const PacienteList = () => {
-  const { pacientes, findPaciente } = useContext(PacienteContext);
+const ProductoList = () => {
+  const { pacientes, findPaciente } = useContext(ProductoContext);
 
   const [isVisible, setIsVisible] = useState(false);
 
@@ -29,7 +29,7 @@ const PacienteList = () => {
 
   return (
     <div>
-      <Panel header="LISTA DE PACIENTES" style={{ textAlign: "center" }}>
+      <Panel header="LISTA DE PRODUCTOS" style={{ textAlign: "center" }}>
         <DataTable
           value={pacientes}
           selectionMode="single"
@@ -37,15 +37,14 @@ const PacienteList = () => {
           footer={footer}
         >
           <Column field="_id" header="Id" />
-          <Column field="nombres" header="Nombres" />
-          <Column field="apellidos" header="Apellidos" />
-          <Column field="fecha_alta" header="Fecha de Alta" />
-          <Column field="fecha_baja" header="Fecha de Baja" />
+          <Column field="nombre" header="Nombre" />
+          <Column field="precio" header="Precio" />
+          <Column field="fecha_almacen" header="Fecha en Almacen" />
         </DataTable>
       </Panel>
-      <PacienteForm isVisible={isVisible} setIsVisible={setIsVisible} />
+      <ProductoForm isVisible={isVisible} setIsVisible={setIsVisible} />
     </div>
   );
 };
 
-export default PacienteList;
+export default ProductoList;
