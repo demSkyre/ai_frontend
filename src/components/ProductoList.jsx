@@ -7,12 +7,12 @@ import { ProductoContext } from "../contexts/ProductoContext";
 import ProductoForm from "./ProductoForm";
 
 const ProductoList = () => {
-  const { pacientes, findPaciente } = useContext(ProductoContext);
+  const { productos, findProducto } = useContext(ProductoContext);
 
   const [isVisible, setIsVisible] = useState(false);
 
-  const savePaciente = (id) => {
-    findPaciente(id);
+  const saveProducto = (id) => {
+    findProducto(id);
     setIsVisible(true);
   };
 
@@ -31,9 +31,9 @@ const ProductoList = () => {
     <div>
       <Panel header="LISTA DE PRODUCTOS" style={{ textAlign: "center" }}>
         <DataTable
-          value={pacientes}
+          value={productos}
           selectionMode="single"
-          onSelectionChange={(e) => savePaciente(e.value._id)}
+          onSelectionChange={(e) => saveProducto(e.value._id)}
           footer={footer}
         >
           <Column field="_id" header="Id" />
